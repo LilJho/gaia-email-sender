@@ -58,11 +58,6 @@ app.post("/send-email", async (req, res) => {
         cid: "unique@beeimg.info",
       },
       {
-        filename: "gaia_houses.png",
-        path: "./images/gaia_houses.png",
-        cid: "unique@gaiahouses.info",
-      },
-      {
         filename: "green_logo.png",
         path: "./images/green_logo.png",
         cid: "unique@greenlogo.info",
@@ -83,8 +78,8 @@ app.post("/send-email", async (req, res) => {
         cid: "unique@mail.info",
       },
       {
-        filename: "bgimage.jpg",
-        path: "./images/bgimage.jpg",
+        filename: "newbg.png",
+        path: "./images/newbg.png",
         cid: "unique@bg.info",
       },
     ],
@@ -181,18 +176,18 @@ app.post("/send-email", async (req, res) => {
     <tbody>
     <tr>
     <td>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;" width="100%">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #aa7575; background-size: auto;" width="100%">
     <tbody>
     <tr>
     <td>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-image: url('images/v763-sasi-17.jpg'); background-repeat: no-repeat; color: #000; background-color: #fefefe; background-size: cover; border-radius: 0; width: 660px; margin: 0 auto;" width="660">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f6f6f1; background-image: url('cid:unique@bg.info'); background-repeat: no-repeat; background-size: auto; border-bottom: 0 solid #fff; border-left: 0 solid #fff; border-radius: 0; border-right: 0px solid #fff; border-top: 0 solid #fff; color: #000; width: 660px; margin: 0 auto;" width="660">
     <tbody>
     <tr>
     <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
     <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
     <tr>
     <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-    <div align="center" class="alignment" style="line-height:10px"><img alt="I'm an image" src="images/green_logo.png" style="display: block; height: auto; border: 0; max-width: 132px; width: 100%;" title="I'm an image" width="132"/></div>
+    <div align="center" class="alignment" style="line-height:10px"><img alt="I'm an image" src="cid:unique@greenlogo.info" style="display: block; height: auto; border: 0; max-width: 132px; width: 100%;" title="I'm an image" width="132"/></div>
     </td>
     </tr>
     </table>
@@ -201,9 +196,9 @@ app.post("/send-email", async (req, res) => {
     <td class="pad">
     <div style="font-family: Tahoma, Verdana, sans-serif">
     <div class="" style="font-size: 12px; font-family: Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 24px; color: #154415; line-height: 2;">
-    <p style="margin: 0; font-size: 28px; text-align: right; mso-line-height-alt: 56px; letter-spacing: 4px;"><span style="font-size:28px;"><strong>"Empower </strong></span></p>
-    <p style="margin: 0; font-size: 28px; text-align: right; mso-line-height-alt: 56px; letter-spacing: 4px;"><span style="font-size:28px;"><strong>Your Health"</strong></span></p>
-    <p style="margin: 0; font-size: 28px; text-align: right; mso-line-height-alt: 56px; letter-spacing: 4px;"><strong><span style="font-size:24px;"><span style="font-size:18px;">Sign Up Today</span></span></strong></p>
+    <p style="margin: 0; font-size: 28px; text-align: center; mso-line-height-alt: 56px; letter-spacing: 4px;"><span style="font-size:28px;"><strong>"Empower </strong></span></p>
+    <p style="margin: 0; font-size: 28px; text-align: center; mso-line-height-alt: 56px; letter-spacing: 4px;"><span style="font-size:28px;"><strong>Your Health"</strong></span></p>
+    <p style="margin: 0; font-size: 28px; text-align: center; mso-line-height-alt: 56px; letter-spacing: 4px;"><strong><span style="font-size:24px;"><span style="font-size:18px;">Sign Up Today</span></span></strong></p>
     </div>
     </div>
     </td>
@@ -213,7 +208,7 @@ app.post("/send-email", async (req, res) => {
     <tr>
     <td class="pad">
     <div style="font-family: sans-serif">
-    <div class="" style="font-size: 12px; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #777776; line-height: 1.2;">
+    <div class="" style="font-size: 12px; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #123d12; line-height: 1.2;">
     <p style="margin: 0; font-size: 12px; text-align: center; mso-line-height-alt: 14.399999999999999px; letter-spacing: 2px;"><span style="font-size:12px;">Set your </span><span style="font-size:12px;">password, </span></p>
     </div>
     </div>
@@ -227,57 +222,25 @@ app.post("/send-email", async (req, res) => {
     </td>
     </tr>
     </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-    <tbody>
-    <tr>
-    <td>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fdfce9; color: #000; width: 660px; margin: 0 auto;" width="660">
-    <tbody>
-    <tr>
-    <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-    <table border="0" cellpadding="0" cellspacing="0" class="social_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+    <table border="0" cellpadding="0" cellspacing="0" class="social_block block-5" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
     <tr>
     <td class="pad" style="padding-top:20px;text-align:center;padding-right:0px;padding-left:0px;">
     <div align="center" class="alignment">
     <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="126px">
     <tr>
-    <td style="padding:0 5px 0 5px;"><a href="https://web.facebook.com/houseofgaiaph" target="_blank"><img alt="Facebook" height="32" src="images/facebook2x.png" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
-    <td style="padding:0 5px 0 5px;"><a href="https://www.instagram.com/houseofgaiaph" target="_blank"><img alt="Instagram" height="32" src="images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
-    <td style="padding:0 5px 0 5px;"><a href="mailto:book@houseofgaia.ph" target="_blank"><img alt="E-Mail" height="32" src="images/mail2x.png" style="display: block; height: auto; border: 0;" title="E-Mail" width="32"/></a></td>
+    <td style="padding:0 5px 0 5px;"><a href="https://web.facebook.com/houseofgaiaph" target="_blank"><img alt="Facebook" height="32" src="cid:unique@facebook.info" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
+    <td style="padding:0 5px 0 5px;"><a href="https://www.instagram.com/houseofgaiaph" target="_blank"><img alt="Instagram" height="32" src="cid:unique@instagram.info" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
+    <td style="padding:0 5px 0 5px;"><a href="mailto:book@houseofgaia.ph" target="_blank"><img alt="E-Mail" height="32" src="cid:unique@mail.info" style="display: block; height: auto; border: 0;" title="E-Mail" width="32"/></a></td>
     </tr>
     </table>
     </div>
     </td>
     </tr>
     </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;" width="100%">
-    <tbody>
-    <tr>
-    <td>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-image: url('images/v763-sasi-17.jpg'); background-repeat: no-repeat; color: #000; background-color: #fefefe; background-size: auto; width: 660px; margin: 0 auto;" width="660">
-    <tbody>
-    <tr>
-    <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-    <table border="0" cellpadding="10" cellspacing="0" class="paragraph_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+    <table border="0" cellpadding="10" cellspacing="0" class="paragraph_block block-6" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
     <tr>
     <td class="pad">
-    <div style="color:#818181;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:150%;text-align:center;mso-line-height-alt:21px;">
+    <div style="color:#504c4c;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:150%;text-align:center;mso-line-height-alt:21px;">
     <p style="margin: 0; word-break: break-word;">Copyright 2021 The House of Gaia</p>
     <p style="margin: 0; word-break: break-word;">Sto. Toribio, Lipa, Batangas</p>
     </div>
@@ -292,7 +255,7 @@ app.post("/send-email", async (req, res) => {
     </tr>
     </tbody>
     </table>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-4" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
     <tbody>
     <tr>
     <td>
@@ -309,7 +272,7 @@ app.post("/send-email", async (req, res) => {
     <!--[if !vml]><!-->
     <table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;"><!--<![endif]-->
     <tr>
-    <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 6px;"><a href="https://www.designedwithbee.com/?utm_source=editor&utm_medium=bee_pro&utm_campaign=free_footer_link" style="text-decoration: none;" target="_blank"><img align="center" alt="Designed with BEE" class="icon" height="32" src="images/bee.png" style="display: block; height: auto; margin: 0 auto; border: 0;" width="34"/></a></td>
+    <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 6px;"><a href="https://www.designedwithbee.com/?utm_source=editor&utm_medium=bee_pro&utm_campaign=free_footer_link" style="text-decoration: none;" target="_blank"><img align="center" alt="Designed with BEE" class="icon" height="32" src="cid:unique@beeimg.info" style="display: block; height: auto; margin: 0 auto; border: 0;" width="34"/></a></td>
     <td style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif; font-size: 15px; color: #9d9d9d; vertical-align: middle; letter-spacing: undefined; text-align: center;"><a href="https://www.designedwithbee.com/?utm_source=editor&utm_medium=bee_pro&utm_campaign=free_footer_link" style="color: #9d9d9d; text-decoration: none;" target="_blank">Designed with BEE</a></td>
     </tr>
     </table>
