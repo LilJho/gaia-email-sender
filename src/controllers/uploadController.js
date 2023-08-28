@@ -1,31 +1,17 @@
-import multer from "multer";
-import path from "path";
+const uploadController = (req, res) => {
+  console.log("Request body:", req.body);
+  console.log("Uploaded file:", req.file);
 
-const uploadFile = (req, res) => {
-  const { destinationPath } = req.body; // Get the destination path from the request body
-
-  if (!destinationPath) {
-    return res.status(400).send("Destination path is missing");
+  if (!req.file) {
+    return res.status(400).json({ message: "No file uploaded" });
   }
 
-  const storage = multer.diskStorage({
-    destination: function (_, __, cb) {
-      const uploadPath = path.join(__dirname, "..", destinationPath);
-      cb(null, uploadPath);
-    },
-    filename: function (_, file, cb) {
-      cb(null, file.originalname);
-    },
-  });
+  const response = {
+    path: `${req.file.destination}/${req.file.filename}`,
+    originalFilename: req.file.originalname,
+  };
 
-  const upload = multer({ storage: storage });
-
-  upload.single("file")(req, res, (err) => {
-    if (err) {
-      return res.status(500).send("File upload failed");
-    }
-    res.send("File uploaded successfully");
-  });
+  res.json(response);
 };
 
-export default uploadFile;
+export default uploadController;

@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import { personalEmail, personalPwd } from "../config.js"; // Import config values
+import { personalEmail, personalPwd } from "../config/config.js"; // Import config values
 
 const sendEmailController = async (req, res) => {
   const transporter = nodemailer.createTransport({
