@@ -1,13 +1,30 @@
 import express from "express";
+import bodyParser from "body-parser";
+import nodemailer from "nodemailer";
+import { config } from "dotenv";
 import cors from "cors";
-import emailRouter from "./src/routes/emailRoutes.js";
-import uploadRouter from "./src/routes/uploadRoutes.js";
-import testRouter from "./src/routes/testRoutes.js";
+
+config();
 
 const app = express();
 const PORT = process.env.PORT || 3500;
 
+app.use(bodyParser.json());
+
+const personalEmail = process.env.EMAIL;
+const personalPwd = process.env.EMAIL_PASS;
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: personalEmail,
+    pass: personalPwd,
+  },
+});
+
 app.use(cors());
+app.use(express.json()); // Add this line
+app.use(express.urlencoded({ extended: true })); // Add this line
 
 app.post("/send-email", async (req, res) => {
   const {
