@@ -1,0 +1,18 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore user-specific config
+.config/
+
+# Ignore package-lock.json (if using npm)
+package-lock.json
+
+# Ignore yarn.lock (if using Yarn)
+yarn.lock
+
+# Ignore build artifacts
+build/
+dist/
