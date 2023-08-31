@@ -33,7 +33,15 @@ app.get("/", () => {
 app.use(cors());
 
 app.post("/send-email", async (req, res) => {
-  const { email, link, firstName, middleName, lastName } = req.body;
+  const {
+    email,
+    link,
+    firstName,
+    middleName,
+    lastName,
+    userAccountId,
+    patientInfoId,
+  } = req.body;
 
   if (!email || !link) {
     return res.status(400).send("Email or link is missing");
@@ -42,9 +50,8 @@ app.post("/send-email", async (req, res) => {
   const url = new URL(link);
   const params = new URLSearchParams(url.search);
   params.set("email", email);
-  params.set("firstName", firstName);
-  params.set("middleName", middleName);
-  params.set("lastName", lastName);
+  params.set("userAccountId", userAccountId);
+  params.set("patientInfoId", patientInfoId);
   url.search = params.toString();
 
   const mailOptions = {
@@ -176,7 +183,7 @@ app.post("/send-email", async (req, res) => {
     <tbody>
     <tr>
     <td>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #aa7575; background-size: auto;" width="100%">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #808080; background-size: auto;" width="100%">
     <tbody>
     <tr>
     <td>
@@ -218,7 +225,7 @@ app.post("/send-email", async (req, res) => {
     <table border="0" cellpadding="10" cellspacing="0" class="button_block block-4" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
     <tr>
     <td class="pad">
-    <div align="center" class="alignment"><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://localhost:3000/register" style="height:42px;width:199px;v-text-anchor:middle;" arcsize="10%" stroke="false" fillcolor="#066c35"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px"><![endif]--><a href="http://localhost:3000/register" style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#066c35;border-radius:4px;width:auto;border-top:0px solid transparent;font-weight:undefined;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:5px;padding-bottom:5px;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:20px;padding-right:20px;font-size:16px;display:inline-block;letter-spacing:2px;"><span style="margin: 0; word-break: break-word; line-height: 32px;">please click here.</span></span></a><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></div>
+    <div align="center" class="alignment"><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${url}" style="height:42px;width:199px;v-text-anchor:middle;" arcsize="10%" stroke="false" fillcolor="#066c35"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px"><![endif]--><a href="${url}" style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#066c35;border-radius:4px;width:auto;border-top:0px solid transparent;font-weight:undefined;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:5px;padding-bottom:5px;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:20px;padding-right:20px;font-size:16px;display:inline-block;letter-spacing:2px;"><span style="margin: 0; word-break: break-word; line-height: 32px;">please click here.</span></span></a><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></div>
     </td>
     </tr>
     </table>
