@@ -35,6 +35,7 @@ app.post("/send-email", async (req, res) => {
     lastName,
     userAccountId,
     patientInfoId,
+    accountStatus,
   } = req.body;
 
   if (!email || !link) {
@@ -46,6 +47,7 @@ app.post("/send-email", async (req, res) => {
   params.set("email", email);
   params.set("userAccountId", userAccountId);
   params.set("patientInfoId", patientInfoId);
+  params.set("accountStatus", accountStatus);
   url.search = params.toString();
 
   const mailOptions = {
